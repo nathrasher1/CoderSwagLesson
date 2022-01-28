@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         adapter = CategoryRecycleAdapter(this, DataServices.categories) { category ->
             val productIntent = Intent(this, ProductsActivity::class.java)
             productIntent.putExtra(EXTRA_CATEGORY, category.title)
-            startActivity(productIntent, )
+            startActivity(productIntent)
 
         }
         categoryListView.adapter = adapter
