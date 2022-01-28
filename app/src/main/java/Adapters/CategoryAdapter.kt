@@ -34,9 +34,9 @@ class CategoryAdapter(context: Context, categories: List<Category>) : BaseAdapte
         val category = categories[position]
             //line above tells where to pull item information from
         val resourceId = context.resources.getIdentifier(category.image, "drawable", context.packageName)
-        holder.categoryImage.setImageResource(resourceId)
+        holder.categoryImage?.setImageResource(resourceId)
             //line above sets image to be displayed in view
-        holder.categoryName.text = category.title
+        holder.categoryName?.text = category.title
             //line above sets text to be displayed in view
         return categoryView
     }
