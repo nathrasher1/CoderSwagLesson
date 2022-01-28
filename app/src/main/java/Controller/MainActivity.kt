@@ -3,6 +3,8 @@ package Controller
 import Adapters.CategoryAdapter
 import Adapters.CategoryRecycleAdapter
 import Services.DataServices
+import Utilities.EXTRA_CATEGORY
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -17,7 +19,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        adapter = CategoryRecycleAdapter(this, DataServices.categories)
+        adapter = CategoryRecycleAdapter(this, DataServices.categories) { category ->
+            val productIntent = Intent(this, ProductsActivity::class.java)
+            productIntent.putExtra(EXTRA_CATEGORY, category.title)
+            startActivity(productIntent, )
+
+        }
         categoryListView.adapter = adapter
 
         val layoutManager = LinearLayoutManager(this)
