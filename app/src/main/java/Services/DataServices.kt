@@ -4,7 +4,7 @@ import Model.Category
 import Model.Product
 
 object DataServices {
-    val catagories = listOf(
+    val categories = listOf(
         Category("SHIRTS","shirtimage"),
         Category("HOODIES", "hoodieimage"),
         Category("HATS","hatimage"),

@@ -1,5 +1,6 @@
 package Controller
 
+import Adapters.CategoryAdapter
 import Model.Category
 import Services.DataServices
 import androidx.appcompat.app.AppCompatActivity
@@ -10,15 +11,13 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var adapter: ArrayAdapter<Category>
+    lateinit var adapter: CategoryAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        adapter = ArrayAdapter(this,
-                android.R.layout.simple_expandable_list_item_1,
-                DataServices.catagories)
+        adapter = CategoryAdapter(this, DataServices.categories)
         categoryListView.adapter = adapter
     }
 }
