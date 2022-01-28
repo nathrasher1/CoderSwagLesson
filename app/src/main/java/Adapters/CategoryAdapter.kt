@@ -10,10 +10,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import app.coderswag.R
 
-class CategoryAdapter(context: Context, categories: List<Category>) : BaseAdapter() {
+class CategoryAdapter(val context: Context, val categories: List<Category>) : BaseAdapter() {
 
-    val context = context
-    val categories = categories
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
         val categoryView: View
         val holder : ViewHolder
@@ -22,9 +20,9 @@ class CategoryAdapter(context: Context, categories: List<Category>) : BaseAdapte
             categoryView = LayoutInflater.from(context).inflate(R.layout.category_list_item, null)
             holder = ViewHolder()
             holder.categoryImage = categoryView.findViewById(R.id.categoryImage)
-                //line above is retrieving and storing the image to be displayed in the view
+                // ^^ retrieving and storing the image to be displayed in the view
             holder.categoryName = categoryView.findViewById(R.id.categoryName)
-                //line above is retrieving and storing the text to be displayed in the view
+                // ^^ retrieving and storing the text to be displayed in the view
             categoryView.tag = holder
         }else{
             //this recycles views
@@ -32,12 +30,12 @@ class CategoryAdapter(context: Context, categories: List<Category>) : BaseAdapte
             categoryView = convertView
         }
         val category = categories[position]
-            //line above tells where to pull item information from
+            // ^^ tells where to pull item information from
         val resourceId = context.resources.getIdentifier(category.image, "drawable", context.packageName)
         holder.categoryImage?.setImageResource(resourceId)
-            //line above sets image to be displayed in view
+            // ^^ sets image to be displayed in view
         holder.categoryName?.text = category.title
-            //line above sets text to be displayed in view
+            // ^^ sets text to be displayed in view
         return categoryView
     }
     override fun getCount(): Int {
