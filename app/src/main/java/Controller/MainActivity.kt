@@ -1,11 +1,9 @@
 package Controller
 
 import Adapters.CategoryAdapter
-import Model.Category
 import Services.DataServices
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import app.coderswag.R
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -19,5 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         adapter = CategoryAdapter(this, DataServices.categories)
         categoryListView.adapter = adapter
+
+
     }
 }
