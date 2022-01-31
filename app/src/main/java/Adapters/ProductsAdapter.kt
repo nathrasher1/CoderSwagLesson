@@ -30,7 +30,7 @@ class ProductsAdapter(val context: Context, val products: List<Product>, val ite
         return products.count()
     }
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.product_cell, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.product_list_cell, parent, false)
         return ProductHolder(view, itemClick)
     }
     override fun onBindViewHolder(holder: ProductHolder, position: Int) {

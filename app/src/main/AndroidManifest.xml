@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CoderSwag">
         <activity
+            android:name="Controller.ProductDetails"
+            android:exported="false" />
+        <activity
             android:name="Controller.ProductsActivity"
             android:exported="false" />
         <activity

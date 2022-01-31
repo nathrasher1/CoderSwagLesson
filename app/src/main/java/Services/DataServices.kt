@@ -12,25 +12,25 @@ object DataServices {
     )
 
     val hats = listOf(
-        Product("Devslopes Graphic Beanie","$18","hat1"),
-        Product("Devslopes Hat Black","$20","hat2"),
-        Product("Devslopes Hat White","$18","hat3"),
-        Product("Devslopes Hat Snapback","$22","hat4")
+        Product("Devslopes Graphic Beanie","$18","hat1", "this is a beanie"),
+        Product("Devslopes Hat Black","$20","hat2", "this is a black hat"),
+        Product("Devslopes Hat White","$18","hat3", "this is a white hat"),
+        Product("Devslopes Hat Snapback","$22","hat4","this is a snapback hat")
     )
 
     val hoodies = listOf(
-        Product("Devslopes Hoodie Gray","$28","hoodie1"),
-        Product("Devslopes Hoodie Red","$30","hoodie2"),
-        Product("Devslopes Gray Hoodie","$28","hoodie3"),
-        Product("Devslopes Black Hoodie","$28","hoodie4")
+        Product("Devslopes Hoodie Gray","$28","hoodie1","this is a gray hoodie"),
+        Product("Devslopes Hoodie Red","$30","hoodie2","this is a red hoodie"),
+        Product("Devslopes Gray Hoodie","$28","hoodie3","this is a gray hoodie"),
+        Product("Devslopes Black Hoodie","$28","hoodie4", "this is a black hoodie")
     )
 
     val shirts = listOf(
-        Product("Devslopes Shirt Black","$18","shirt1"),
-        Product("Devslopes Badge Light Gray","$20","shirt2"),
-        Product("Devslopes Logo Shirt Red","$22","shirt3"),
-        Product("Devslopes Hustle","$22","shirt4"),
-        Product("Kickflip Studios","$18","shirt5")
+        Product("Devslopes Shirt Black","$18","shirt1","this is a black shirt"),
+        Product("Devslopes Badge Light Gray","$20","shirt2", "this is a light gray shirt"),
+        Product("Devslopes Logo Shirt Red","$22","shirt3","this is a red shirt"),
+        Product("Devslopes Hustle","$22","shirt4", "this is a shirt"),
+        Product("Kickflip Studios","$18","shirt5","this is also a shirt. I think it has something to do with skateboarding.")
     )
 
     val digitalGoods = listOf<Product>()
@@ -43,4 +43,7 @@ object DataServices {
             else -> digitalGoods
         }
     }
+//    fun getItem() : Int {
+//
+//    }
 }
